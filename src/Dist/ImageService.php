@@ -4,6 +4,8 @@ namespace SahusoftCom\EloquentImageMutator\Dist;
 
 use SahusoftCom\EloquentImageMutator\Dist\ImageFieldLocal;
 
+use Str;
+
 class ImageService
 {
 
@@ -123,7 +125,7 @@ class ImageService
 
 	public static function getANewFileName($ext)
 	{
-	    return self::getANewFolder().'/'.str_random(16).'.'.$ext;
+	    return self::getANewFolder().'/'.Str::random(16).'.'.$ext;
 	}
 
 	public static function makeFromFile($urn, $original_name = '', $title='')
